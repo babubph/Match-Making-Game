@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Daraz Mart Game</string>
+    <string name="title_activity_splash">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="app_footer">Developed by: TeamDjango Technology  | V 1.0</string>
+</resources>

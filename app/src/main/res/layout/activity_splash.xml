@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_img"
+    android:fitsSystemWindows="true"
+    android:theme="@style/ThemeOverlay.MatchmakingGameAssignment.FullscreenContainer"
+    tools:context=".activities.Splash">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="120dp"
+        android:src="@drawable/game_logo1" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:id="@+id/splash_animation"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        app:lottie_rawRes="@raw/splash_loading_blocks" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/app_footer"
+        android:textColor="#CFCFCF" />
+
+</RelativeLayout>

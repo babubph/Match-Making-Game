@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_game_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_img"
+    android:theme="@style/ThemeOverlay.MatchmakingGameAssignment.FullscreenContainer"
+    tools:context=".activities.InGameActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal" >
+
+
+
+            <LinearLayout
+
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="340dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_img" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/time_earned_test_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginEnd="40sp"
+                    android:layout_toStartOf="@id/game_layout"
+                    android:elevation="15sp"
+                    android:text="+ 1 sec"
+                    android:textColor="@color/background_color"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:text="00:00:00"
+                    android:textSize="25sp"
+                    android:background="#065126"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/game_restarting_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:textColor="@color/background_color"
+                    android:text="0"
+                    android:textSize="2sp"
+                    android:visibility="gone"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/home_action"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:backgroundTint="@color/white"
+                    android:elevation="0dp"
+                    app:cardCornerRadius="100dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/home_icon" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/yellowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/game_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+
+                <LinearLayout
+                    android:id="@+id/no_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_back"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+
+
+                    <!-- 1st Layer Start -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_match_9"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/img9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/imageView9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_match_2"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+
+                                <ImageView
+                                    android:id="@+id/img2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_match_5"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+
+                                <ImageView
+                                    android:id="@+id/img5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/imageView5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <!-- 1st Leyer End -->
+
+                    <!-- 2st Layer Start -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_match_4"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+
+                                <ImageView
+                                    android:id="@+id/img4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_match_3"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+
+                                <ImageView
+                                    android:id="@+id/img3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/imageView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_match_6"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+
+                                <ImageView
+                                    android:id="@+id/img6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/imageView6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <!-- 2st Leyer End -->
+
+                    <!-- 3st Layer Start -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_match_8"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+
+                                <ImageView
+                                    android:id="@+id/img8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/imageView8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_match_7"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+
+                                <ImageView
+                                    android:id="@+id/img7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/imageView7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_match_1"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+
+                                <ImageView
+                                    android:id="@+id/img1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/imageView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <!-- 3st Leyer End -->
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_back1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical">
+
+
+                    <!-- 1st Leyer Start -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_confirm_1"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            android:backgroundTint="#CDECE5"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/box_color">
+
+                                <ImageView
+                                    android:id="@+id/imgMatch1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_view_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:lottie_rawRes="@raw/celebration_animation" />
+
+                                <TextView
+                                    android:id="@+id/compare_image_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_confirm_2"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/box_color">
+
+                                <ImageView
+                                    android:id="@+id/imgMatch2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/compare_image_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_view_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:lottie_rawRes="@raw/celebration_animation" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_confirm_3"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/box_color"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/box_color">
+
+                                <ImageView
+                                    android:id="@+id/imgMatch3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/compare_image_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_view_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:lottie_rawRes="@raw/celebration_animation" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                    <!-- 1st Leyer End -->
+
+                    <!-- 2st Leyer Start -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_confirm_4"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/box_color">
+
+                                <ImageView
+                                    android:id="@+id/imgMatch4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/compare_image_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_view_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:lottie_rawRes="@raw/celebration_animation" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_confirm_5"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/box_color">
+
+                                <ImageView
+                                    android:id="@+id/imgMatch5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/compare_image_5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_view_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:lottie_rawRes="@raw/celebration_animation" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_confirm_6"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/box_color">
+
+                                <ImageView
+                                    android:id="@+id/imgMatch6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/compare_image_6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_view_6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:lottie_rawRes="@raw/celebration_animation" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                    <!-- 2st Leyer End -->
+
+                    <!-- 3rd Leyer Start -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_confirm_7"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/box_color">
+
+                                <ImageView
+                                    android:id="@+id/imgMatch7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/compare_image_7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_view_7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:lottie_rawRes="@raw/celebration_animation" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_confirm_8"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/box_color">
+
+                                <ImageView
+                                    android:id="@+id/imgMatch8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/compare_image_8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_view_8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:lottie_rawRes="@raw/celebration_animation" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_confirm_9"
+                            android:layout_width="100sp"
+                            android:layout_height="90sp"
+                            android:elevation="9sp"
+                            app:cardBackgroundColor="@color/stylish_blue"
+                            app:cardCornerRadius="9sp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@color/box_color">
+
+                                <ImageView
+                                    android:id="@+id/imgMatch9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img1"
+                                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/compare_image_9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_view_9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:lottie_rawRes="@raw/celebration_animation" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                    <!-- 3st Leyer End -->
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pause_menu_card_view"
+        android:layout_width="400sp"
+        android:layout_height="320sp"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/oreng_overlay"
+        app:cardCornerRadius="25sp"
+        app:cardElevation="50dp"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:paddingTop="10dp"
+                android:layout_height="70dp"
+                android:src="@drawable/game_logo"
+                android:layout_gravity="center_horizontal|center_vertical"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/start_resume_Option"
+                android:layout_width="350sp"
+                android:layout_height="85sp"
+                android:layout_margin="5sp"
+                android:elevation="12sp"
+                app:cardBackgroundColor="@color/teal_700"
+                app:cardCornerRadius="30sp"
+                app:cardUseCompatPadding="true">
+
+
+                <TextView
+                    android:id="@+id/start_game_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Start"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exit_option"
+                android:layout_width="350sp"
+                android:layout_height="80sp"
+
+                android:elevation="12sp"
+                app:cardBackgroundColor="@color/deep_red"
+                app:cardCornerRadius="30sp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Exit"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/app_footer"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/win_menu_card_view"
+        android:layout_width="500sp"
+        android:layout_height="350sp"
+        android:layout_centerInParent="true"
+        android:elevation="9sp"
+        app:cardBackgroundColor="#fdfff2"
+        app:cardCornerRadius="18sp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/start_resume_Option2"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/winMsg"
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/game_logo"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/start_resume_Option1"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/total_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+
+                    android:layout_marginBottom="5dp"
+                    android:text="Total Score: 0"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+
+                    android:layout_marginBottom="5dp"
+                    android:text="Total Time: 0:00"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnplayAgin"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/round_border"
+                        android:padding="15dp"
+                        android:text="Play Again"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/background_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnExit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_border"
+                        android:padding="15dp"
+                        android:text="Exit"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/deep_red"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="@string/app_footer"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/game_over_menu_card_view"
+        android:layout_width="500sp"
+        android:layout_height="350sp"
+        android:layout_centerInParent="true"
+        android:elevation="9sp"
+        app:cardCornerRadius="18sp"
+        android:background="@drawable/round_border"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/game_over_img"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/point_view"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Your Point : 0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnGameOver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_border"
+                android:padding="15dp"
+                android:text="Play Again"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/deep_red"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/btnExit1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_border"
+                android:padding="15dp"
+                android:text="Exit"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/light_blue_900"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="@string/app_footer"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_menu_card_view"
+        android:layout_width="400sp"
+        android:layout_height="360sp"
+        android:layout_centerInParent="true"
+        android:elevation="9sp"
+        app:cardBackgroundColor="#fdfff2"
+        app:cardCornerRadius="18sp"
+        android:background="@drawable/round_border"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/game_logo"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnHomePlayAgain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_border"
+                android:padding="15dp"
+                android:text="Play Agian"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/background_color"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/btnExit2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_border"
+                android:padding="15dp"
+                android:text="Exit Game"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/deep_red"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_border"
+                android:padding="15dp"
+                android:text="Close"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/light_blue_900"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
